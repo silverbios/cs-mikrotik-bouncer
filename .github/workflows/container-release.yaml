@@ -8,6 +8,12 @@ on:
     branches:
       - 'main'
   workflow_dispatch:
+    inputs:
+      tag:
+        description: 'for ROS 7.18 testing'
+        required: true
+        default: '0.7.0-beta' # Static tag for manual triggers
+
 
 env:
   IMAGE_NAME: ${{ github.repository }}
